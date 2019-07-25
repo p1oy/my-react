@@ -40,19 +40,34 @@
     <script type="text/babel">
         let country = "Thailand";
         
-        let Hello = (props) => {
-            console.log(props.textColor);
-            // className="orange" in h1
-            let styleObject = {
-                color:props.textColor
+        class Hello extends React.Component{
+            render(){
+                console.log(this.props.textColor);
+                let styleObject = {
+                    color:this.props.textColor
+                }
+                return (
+                    <div>
+                        <h1 id="header" style={styleObject} >Hi {this.props.name}</h1>
+                    </div>
+                )
             }
-            
-            return (
-                <div>
-                    <h1 id="header" style={styleObject} >Hello {country}  {props.name}</h1>
-                </div>
-            )
         }
+
+        // name tag ห้ามเหมือนกัน  class เวลาเรียกใช้ tag จะเอาชื่อ class ไปเรียกเลย 
+        // let Hello = (props) => {
+        //     console.log(props.textColor);
+        //     // className="orange" in h1
+        //     let styleObject = {
+        //         color:props.textColor
+        //     }
+        //     // style={{color: props.textColor}}
+        //     return (
+        //         <div>
+        //             <h1 id="header" style={styleObject} >Hello {country}  {props.name}</h1>
+        //         </div>
+        //     )
+        // }
         
         let LoginForm = () => {
             return (
