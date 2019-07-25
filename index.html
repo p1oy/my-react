@@ -40,10 +40,16 @@
     <script type="text/babel">
         let country = "Thailand";
         
-        let Hello = () => {
+        let Hello = (props) => {
+            console.log(props.textColor);
+            // className="orange" in h1
+            let styleObject = {
+                color:props.textColor
+            }
+            
             return (
                 <div>
-                    <h1 id="header" className="orange">Hello {country}</h1>
+                    <h1 id="header" style={styleObject} >Hello {country}  {props.name}</h1>
                 </div>
             )
         }
@@ -52,9 +58,9 @@
             return (
                 <div>
                     <form action="" method="get">
-                        <label htmlfor="">Username:</label>
+                        <label htmlFor="">Username:</label>
                         <input type="text" name="" id=""/>
-                        <label htmlfor="">Password:</label>
+                        <label htmlFor="">Password:</label>
                         <input type="password" name="" id=""/>
                         <input type="button" value="submit"/>
                     </form>
@@ -65,8 +71,10 @@
         ReactDOM.render(
             //<h1 id="header" className="orange">Hello {country}</h1>,// {country} เป็นแทรกตัวแปรใน html, className=class in html
             //<Hello/>,
+            //remove textColor="green" => props.textColor can not find value
             (
                 <div>
+                    <Hello name="XiaoZhan" textColor="green" />
                     <LoginForm/>
                     <LoginForm/>
                 </div>
