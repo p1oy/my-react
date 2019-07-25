@@ -10,11 +10,11 @@
     <script src="https:/unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
     <script src="https:/unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
-        #header{
+        #header {
             font-size: 60px
         }
 
-        .orange{
+        .orange {
             color: rgb(255, 119, 7);
         }
     </style>
@@ -36,11 +36,41 @@
         )
     </script> -->
 
+    
     <script type="text/babel">
         let country = "Thailand";
+        
+        let Hello = () => {
+            return (
+                <div>
+                    <h1 id="header" className="orange">Hello {country}</h1>
+                </div>
+            )
+        }
+        
+        let LoginForm = () => {
+            return (
+                <div>
+                    <form action="" method="get">
+                        <label htmlfor="">Username:</label>
+                        <input type="text" name="" id=""/>
+                        <label htmlfor="">Password:</label>
+                        <input type="password" name="" id=""/>
+                        <input type="button" value="submit"/>
+                    </form>
+                </div>
+            )
+        }
 
         ReactDOM.render(
-            <h1 id="header" className="orange">Hello {country}</h1>,// {country} เป็นแทรกตัวแปรใน html, className=class in html
+            //<h1 id="header" className="orange">Hello {country}</h1>,// {country} เป็นแทรกตัวแปรใน html, className=class in html
+            //<Hello/>,
+            (
+                <div>
+                    <LoginForm/>
+                    <LoginForm/>
+                </div>
+            ),
             document.getElementById("root") 
         )
     </script>
