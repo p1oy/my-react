@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https:/unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https:/unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https:/unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        #header{
+            font-size: 60px
+        }
+
+        .orange{
+            color: rgb(255, 119, 7);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <!-- <script type="text/javascript">
+        ReactDOM.render(
+            React.createElement("h1",null,"Hello World"),// create elemet
+            document.getElementById("root") //ที่ที่ใส่
+        )
+    </script> -->
+
+    <!-- <script type="text/babel">
+        ReactDOM.render(
+            <h1>Hello World2</h1>,
+            document.getElementById("root") //ที่ที่ใส่
+        )
+    </script> -->
+
+    <script type="text/babel">
+        let country = "Thailand";
+
+        ReactDOM.render(
+            <h1 id="header" className="orange">Hello {country}</h1>,// {country} เป็นแทรกตัวแปรใน html, className=class in html
+            document.getElementById("root") 
+        )
+    </script>
+</body>
+
+</html>
