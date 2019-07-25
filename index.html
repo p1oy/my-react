@@ -54,6 +54,16 @@
             }
         }
 
+        class Test extends React.Component{
+            render(){
+                return(
+                    <div>
+                        <p style={{color: this.props.colorName}}>{this.props.nameTest}</p>
+                    </div>
+                )
+            }
+        }
+
         // name tag ห้ามเหมือนกัน  class เวลาเรียกใช้ tag จะเอาชื่อ class ไปเรียกเลย 
         // let Hello = (props) => {
         //     console.log(props.textColor);
@@ -69,18 +79,35 @@
         //     )
         // }
         
-        let LoginForm = () => {
-            return (
-                <div>
-                    <form action="" method="get">
-                        <label htmlFor="">Username:</label>
-                        <input type="text" name="" id=""/>
-                        <label htmlFor="">Password:</label>
-                        <input type="password" name="" id=""/>
-                        <input type="button" value="submit"/>
-                    </form>
-                </div>
-            )
+        // let LoginForm = () => {
+        //     return (
+        //         <div>
+        //             <form action="" method="get">
+        //                 <label htmlFor="">Username:</label>
+        //                 <input type="text" name="" id=""/>
+        //                 <label htmlFor="">Password:</label>
+        //                 <input type="password" name="" id=""/>
+        //                 <input type="button" value="submit"/>
+        //             </form>
+        //         </div>
+        //     )
+        // }
+
+        class LoginForm extends React.Component{
+            render(){
+                return (
+                    <div>
+                        <form action="" method="get">
+                            <label htmlFor="">Username:</label>
+                            <input type="text" name="" id=""/>
+                            <label htmlFor="">Password:</label>
+                            <input type="password" name="" id=""/>
+                            <input type="button" value="submit"/>
+                        </form>
+                        <Test nameTest="test123" colorName="orange"/>
+                    </div>
+                )
+            }
         }
 
         ReactDOM.render(
